@@ -50,8 +50,6 @@ div {
 
 .card1 {
   background-color: hsl(31, 77%, 52%);
-  border-top-left-radius: 5%;
-  border-bottom-left-radius: 5%;
 }
 
 .card2 {
@@ -60,8 +58,18 @@ div {
 
 .card3 {
   background-color: hsl(179, 100%, 13%);
-  border-bottom-right-radius: 5%;
-  border-top-right-radius: 5%;
+}
+
+@media only screen and (min-width: 375px) {
+    .card1 {
+        border-top-left-radius: 5%;
+        border-bottom-left-radius: 5%;
+    }
+
+    .card3 {
+        border-bottom-right-radius: 5%;
+        border-top-right-radius: 5%;
+    }
 }
 
 .flex {
@@ -75,11 +83,16 @@ div {
     display: block !important;
   }
 
-  .card1,
-  .card2,
+
+  .card1 {
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: none;
+  }
+
   .card3 {
-    border-radius: 2%;
-    margin: 1rem;
+      border-bottom-left-radius: 5%;
+      border-bottom-right-radius: 5%;
   }
 }
 
@@ -89,9 +102,6 @@ div {
   border-radius: 4rem;
   padding: 0.7rem;
   margin: auto;
-  text-align: center;
-  display: flex;
-  justify-content: center;
   border: none;
   width: 7rem;
   cursor: pointer;
